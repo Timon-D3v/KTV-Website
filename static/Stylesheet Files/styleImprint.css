@@ -1,0 +1,52 @@
+.linkImprint {
+    color: black;
+    text-decoration: underline;
+}
+
+.linkImprint:hover {
+    color: var(--c4);
+}
+
+.animateABC {
+    animation-name: backInRight;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.animateDEF {
+    animation-name: backInLeft;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+@keyframes backInRight {
+    0% {
+        transform: translateX(2000px) scale(.7);
+        opacity: .7;
+    }
+    80% {
+        transform: translateX(0) scale(.7);
+        opacity: .7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backInLeft {
+    0% {
+        transform: translateX(-2000px) scale(.7);
+        opacity: .7;
+    }
+    80% {
+        transform: translateX(0) scale(.7);
+        opacity: .7;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

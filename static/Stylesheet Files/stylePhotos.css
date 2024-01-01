@@ -1,0 +1,324 @@
+@media screen and (min-width: 1290px) and (orientation: landscape) {
+    .cardShuffle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cardShuffleDiv {
+        width: 90%;
+        height: 100%;
+    }
+
+    .cardShuffleImg {
+        height: 800px;
+        width: auto;
+        box-shadow: 0 8px 32px 0 var(--c1);
+    }
+
+    .shuffleSlide {
+        display: none;
+    }
+
+    .prev, 
+    .next {
+        position: absolute;
+        top: 50%;        
+        margin-top: -22px;
+        padding: 16px;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .next {
+        right: 1%;
+    }
+
+    .prev {
+        left: 1%;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .imgCaption {
+        display: none;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .numberOutOf {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        padding: 8px 12px;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-bottom-left-radius: 15px;
+    }
+
+    .currentSlideDot,
+    .currentSlideDot1,
+    .currentSlideDot2,
+    .currentSlideDot3,
+    .currentSlideDot4,
+    .currentSlideDot5,
+    .currentSlideDot6,
+    .currentSlideDot7,
+    .currentSlideDot8,
+    .currentSlideDot9 {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, 
+    .currentSlideDot:hover,
+    .currentSlideDot1:hover,
+    .currentSlideDot2:hover,
+    .currentSlideDot3:hover,
+    .currentSlideDot4:hover,
+    .currentSlideDot5:hover,
+    .currentSlideDot6:hover,
+    .currentSlideDot7:hover,
+    .currentSlideDot8:hover,
+    .currentSlideDot9:hover {
+        background-color: #717171;
+    }
+
+    .dotsHolder {
+        text-align:center;
+    }
+}
+
+@media screen and (orientation: portrait) and (min-width: 680px),
+screen and (orientation: landscape) and (max-width: 1290px) and (min-width: 680px) {
+    .cardShuffle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cardShuffleDiv {
+        width: 90%;
+        height: 100%;
+    }
+
+    .cardShuffleImg {
+        height: 400px;
+        width: auto;
+    }
+
+    .shuffleSlide {
+        display: none;
+    }
+
+    .prev, 
+    .next {
+        position: absolute;
+        top: 50%;        
+        margin-top: -22px;
+        padding: 16px;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .next {
+        right: 1%;
+    }
+
+    .prev {
+        left: 1%;
+    }
+
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .imgCaption {
+        display: none;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .numberOutOf {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        padding: 8px 12px;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-bottom-left-radius: 15px;
+    }
+
+    .currentSlideDot,
+    .currentSlideDot1,
+    .currentSlideDot2,
+    .currentSlideDot3,
+    .currentSlideDot4,
+    .currentSlideDot5,
+    .currentSlideDot6,
+    .currentSlideDot7,
+    .currentSlideDot8,
+    .currentSlideDot9 {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, 
+    .currentSlideDot:hover,
+    .currentSlideDot1:hover,
+    .currentSlideDot2:hover,
+    .currentSlideDot3:hover,
+    .currentSlideDot4:hover,
+    .currentSlideDot5:hover,
+    .currentSlideDot6:hover,
+    .currentSlideDot7:hover,
+    .currentSlideDot8:hover,
+    .currentSlideDot9:hover {
+        background-color: #717171;
+    }
+
+    .dotsHolder {
+        text-align:center;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .cardShuffle {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cardShuffleDiv {
+        width: 90%;
+        height: 100%;
+    }
+
+    .cardShuffleImg {
+        height: 200px;
+        width: auto;
+    }
+
+    .shuffleSlide {
+        display: none;
+    }
+
+    .prev, 
+    .next {
+        position: absolute;
+        top: 50%;        
+        margin-top: -22px;
+        padding: 16px;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .next {
+        right: 1%;
+    }
+
+    .prev {
+        left: 1%;
+    }
+
+
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .imgCaption {
+        display: none;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .numberOutOf {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 12px;
+        padding: 8px 12px;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-bottom-left-radius: 15px;
+    }
+
+    .currentSlideDot,
+    .currentSlideDot1,
+    .currentSlideDot2,
+    .currentSlideDot3,
+    .currentSlideDot4,
+    .currentSlideDot5,
+    .currentSlideDot6,
+    .currentSlideDot7,
+    .currentSlideDot8,
+    .currentSlideDot9 {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, 
+    .currentSlideDot:hover,
+    .currentSlideDot1:hover,
+    .currentSlideDot2:hover,
+    .currentSlideDot3:hover,
+    .currentSlideDot4:hover,
+    .currentSlideDot5:hover,
+    .currentSlideDot6:hover,
+    .currentSlideDot7:hover,
+    .currentSlideDot8:hover,
+    .currentSlideDot9:hover {
+        background-color: #717171;
+    }
+
+    .dotsHolder {
+        text-align:center;
+    }
+}

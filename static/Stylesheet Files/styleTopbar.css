@@ -1,0 +1,292 @@
+@media screen and (min-width: 830px) and (orientation: landscape) {
+    header {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        height: 64px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .topbar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 64px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarContainer1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        min-width: 128px;
+        max-width: 30%;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .topbarMenu {
+        scale: 1.6;
+        transform: translateX(40%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #topbarMenuButton {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarLogo {
+        height: 64px;
+        width: 64px;
+    }
+
+    .topbarContainer2 {
+        display: flex;
+        align-items: center;
+    }
+
+    .topbarTitle {
+        margin: 0;
+    }
+
+    .topbarChat,
+    .topbarPhone,
+    .topbarInstagram,
+    .topbarChatActive,
+    .topbarPhoneActive,
+    .topbarInstagramActive {
+        width: 32px;
+        height: 32px;
+        margin: 5px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .topbarInstagram {
+        scale: 1.2;
+    }
+
+    .topbarInstagramActive {
+        scale: 1.2;
+        transform: scale(1.6);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarPhoneActive {
+        filter: invert(57%) sepia(70%) saturate(4718%) hue-rotate(117deg) brightness(105%) contrast(95%);
+        transform: scale(1.5);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarChatActive {
+        filter: invert(39%) sepia(68%) saturate(3161%) hue-rotate(191deg) brightness(103%) contrast(102%);
+        transform: scale(1.5);
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    /* For Menu */
+
+
+    .gg-close {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 40px
+    }
+    .gg-close::after,
+    .gg-close::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        transform: rotate(45deg);
+        border-radius: 5px;
+        top: 8px;
+        left: 1px
+    }
+    .gg-close::after {
+        transform: rotate(-45deg)
+    }
+
+    .gg-menu {
+        transform: scale(var(--ggs,1))
+    }
+    .gg-menu,
+    .gg-menu::after,
+    .gg-menu::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 3px;
+        background: currentColor
+    }
+    .gg-menu::after,
+    .gg-menu::before {
+        content: "";
+        position: absolute;
+        top: -6px
+    }
+    .gg-menu::after {
+        top: 6px
+    }
+}
+
+@media screen and (orientation: portrait),
+screen and (orientation: landscape) and (max-width: 830px) {
+    header {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        height: 128px;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .topbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 128px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarContainer1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        order: 1;
+        min-width: 256px;
+        max-width: 30%;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .topbarMenu {
+        scale: 3;
+        transform: translateX(60%);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #topbarMenuButton {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .topbarLogo {
+        height: 128px;
+        width: 128px;
+    }
+
+    .topbarContainer2 {
+        display: flex;
+        align-items: center;
+        order: 3;
+        width: max-content;
+        height: 128px;
+        padding-right: 1%;
+    }
+
+    .topbarContainer2 h1 {
+        width: max-content;
+        align-self: center;
+    }
+
+    .topbarTitle {
+        margin: 0;
+    }
+
+    .topbarContainer3 {
+        visibility: hidden;
+        height: 0px;
+        width: 0px;
+        order: 2;
+    }
+
+
+    /* For Menu */
+
+
+    .gg-close {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 22px;
+        height: 22px;
+        border: 2px solid transparent;
+        border-radius: 40px
+    }
+    .gg-close::after,
+    .gg-close::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        transform: rotate(45deg);
+        border-radius: 5px;
+        top: 8px;
+        left: 1px
+    }
+    .gg-close::after {
+        transform: rotate(-45deg)
+    }
+
+    .gg-menu {
+        transform: scale(var(--ggs,1))
+    }
+    .gg-menu,
+    .gg-menu::after,
+    .gg-menu::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 3px;
+        background: currentColor
+    }
+    .gg-menu::after,
+    .gg-menu::before {
+        content: "";
+        position: absolute;
+        top: -6px
+    }
+    .gg-menu::after {
+        top: 6px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header {
+        height: 192px;
+    }
+
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        height: 192px;
+    }
+
+    .mainSection {
+        top: 256px;
+    }
+}

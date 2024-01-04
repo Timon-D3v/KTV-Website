@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./img/icon.jpg" rel="icon" type="image/x-icon">
+    <title>Build all Files for KTV</title>
+    <style>
+        .invisible {
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Anfang generieren (Head)</h1>
+    <button type="button" id="c_head">Generieren</button>
+
+    <h1>Titel und weitere Informationen</h1>
+    <label for="i_title">Titel</label><br>
+    <input type="text" name="i_title" id="i_title"><br><br>
+
+    <label for="i_desc">Beschreibung</label><br>
+    <input type="text" name="i_desc" id="i_desc"><br><br>
+
+    <input type="checkbox" name="i_custom_icon" id="i_custom_icon">
+    <label for="i_custom_icon">Spezielles Icon?</label><br><br>
+
+    <div class="invisible" id="toggle_icon">
+        <label for="i_icon_path" id="path_to_icon_label">Pfad zu Icon</label><br>
+        <input type="text" name="i_icon_path" id="custom_icon"><br><br>
+    </div>
+
+    <button type="button" id="c_finish_head">Abschliessen</button>
+
+    <h1>Titel hinzufügen (header)</h1>
+
+    <label for="i_page_title">Seitentitel</label><br>
+    <input type="text" name="i_page_title" id="i_page_title"><br><br>
+
+    <button type="button" id="c_header">Hinzufügen</button>
+
+    <h1>Abschluss</h1>
+    <button type="button" id="copy_result">Resultat kopieren</button>
+
+
+
+
+    <script>
+        // build your site
+
+        let output = "";
+
+        document.getElementById("c_head").addEventListener("click", () => {
+            output += '<!DOCTYPE html>\n\
+<html lang="de-ch">\n\
+    <head>\n\
+        <meta charset="utf-8">\n\
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">\n\
+        <meta name="Owner" content="Timon Fiedler">\n\
+        <meta name="Developper" content="Timon Fiedler">\n\
+        <meta name="Alias" content="timon.dev">\n\
+        <meta name="Last modified" content="' + Date() + '">\n';
+            document.getElementById("c_head").innerText = "Erledigt";
+        });
+
+        document.getElementById("copy_result").addEventListener("click", () => {
+            navigator.clipboard.writeText(output);
+            document.getElementById("copy_result").innerText = "Kopiert";
+        });
+
+        document.getElementById("i_custom_icon").addEventListener("click", () => {
+            document.getElementById("toggle_icon").classList.toggle("invisible");
+        });
+
+        document.getElementById("c_finish_head").addEventListener("click", () => {
+            let desc = document.getElementById("i_desc").value,
+                title = document.getElementById("i_title").value,
+                custom_icon = '        <link href="./img/logo.jpg" rel="icon" type="image/x-icon">\n';
+            if (document.getElementById("i_custom_icon").checked) {
+                custom_icon = '        <link href="' + document.getElementById("custom_icon").value + '" rel="icon" type="image/x-icon">\n';
+            };
+            output += '        <title>Home | KTV Altstetten</title>\n\
+        <meta name="description" content="' + desc + '">\n\
+        <meta property="og:title" content="KTV Altstetten">\n\
+        <meta property="og:url" content="https://ktv-altstetten.ch/###################################################FILENAMEE#########################################3">\n\
+        <meta property="og:description" content="' + desc + '">\n\
+        <meta property="og:image" content="./img/icon.jpg">\n\
+        <meta property="og:image:type" content="image/png">\n\
+        <meta name="google" content="nositelinkssearchbox">\n\
+        <meta name="robots" content="index,follow">\n' + custom_icon + '        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"><\/script>\n\
+    </head>\n\
+    <body>\n';
+            document.getElementById("c_finish_head").innerText = "Erledigt";
+        });
+
+
+    // head is done => Body starts
+
+
+
+        $("#c_header").on("click", () => {
+            $("#c_header").text("Erledigt!")
+        })
+    </script>
+</body>
+</html>

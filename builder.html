@@ -80,7 +80,7 @@
             if (document.getElementById("i_custom_icon").checked) {
                 custom_icon = '        <link href="' + document.getElementById("custom_icon").value + '" rel="icon" type="image/x-icon">\n';
             };
-            output += '        <title>Home | KTV Altstetten</title>\n\
+            output += '        <title>' + title + ' | KTV Altstetten</title>\n\
         <meta name="description" content="' + desc + '">\n\
         <meta property="og:title" content="KTV Altstetten">\n\
         <meta property="og:url" content="https://ktv-altstetten.ch/###################################################FILENAMEE#########################################3">\n\
@@ -88,7 +88,15 @@
         <meta property="og:image" content="./img/icon.jpg">\n\
         <meta property="og:image:type" content="image/png">\n\
         <meta name="google" content="nositelinkssearchbox">\n\
-        <meta name="robots" content="index,follow">\n' + custom_icon + '        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"><\/script>\n\
+        <meta name="robots" content="index,follow">\n' + custom_icon + '\
+        <link rel="stylesheet" href="./css/hamburger.css">\n\
+        <link rel="stylesheet" href="./css/global.css">\n\
+        <link rel="stylesheet" href="" id="stylesheet">\n\
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"><\/script>\n\
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"><\/script>\n\
+        <script type="text/javascript" src="./js/global.js" defer><\/script>\n\
+        <script type="text/javascript" src="./js/header.js" defer><\/script>\n\
+        <script type="text/javascript" src="./js/nav.js" defer><\/script>\n\
     </head>\n\
     <body>\n';
             document.getElementById("c_finish_head").innerText = "Erledigt";
@@ -100,8 +108,69 @@
 
 
         $("#c_header").on("click", () => {
-            $("#c_header").text("Erledigt!")
-        })
+            let title = $("#i_page_title").val();
+            output += '    <header>\n\
+        <img alt="Logo" src="./img/logo.png" class="logo">\n\
+        <h1>' + title + '</h1>\n\
+        <button class="hamburger hamburger--spin" type="button">\n\
+            <span class="hamburger-box">\n\
+                <span class="hamburger-inner"></span>\n\
+            </span>\n\
+        </button>\n\
+    </header>\n\
+    <nav>\n\
+        <div class="nav">\n\
+            <ul>\n\
+                <li><a href="./index.html">\n\
+                    <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"\n\
+                    >Home\n\
+                </a></li>\n\
+                <li><a href="./contact.html">\n\
+                    <img alt="Kontakt" class="navpic" src="./img/svg/contact.svg" loading="lazy"\n\
+                    >Vorstand | Kontakt\n\
+                </a></li>\n\
+                <li><a href="./teamVolley.html">\n\
+                    <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"\n\
+                    >Mannschaften Volleyball\n\
+                    </a>\n\
+                    <ul>\n\
+                        <li><a href="./teamVolleyAmigos.html">Amigos</a></li>\n\
+                        <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>\n\
+                        <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>\n\
+                        <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>\n\
+                    </ul>\n\
+                </li>\n\
+                <li><a href="./riege.html">\n\
+                    <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"\n\
+                    >Männerriege\n\
+                    </a>\n\
+                    <ul>\n\
+                        <li><a href="./riegeFaustball.html">Faustball</a></li>\n\
+                    </ul>\n\
+                </li>\n\
+                <li><a href="./documents.html">\n\
+                    <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"\n\
+                    >Programm | Dokumente\n\
+                </a></li>\n\
+                <li><a  href="./photos.html">\n\
+                    <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"\n\
+                    >Fotogalerie\n\
+                    </a>\n\
+                    <ul>\n\
+                        <li><a href="./photosAktive.html">Aktive</a></li>\n\
+                        <li><a href="./photosJunior.html">Junioren</a></li>\n\
+                        <li><a href="./photosRiege.html">Männerriege</a></li>\n\
+                    </ul>\n\
+                </li>\n\
+                <li><a  href="./imprint.html">\n\
+                    <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"\n\
+                    >Impressum\n\
+                </a></li>\n\
+            </ul>\n\
+        </div>\n\
+    </nav>\n'
+            $("#c_header").text("Erledigt!");
+        });
     </script>
 </body>
 </html>

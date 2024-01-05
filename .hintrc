@@ -16,6 +16,7 @@
           "scale"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }

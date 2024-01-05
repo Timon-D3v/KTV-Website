@@ -4,41 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <style>
-        /* For Desktop */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0px 4px 2px -2px gray;
-            & > h1 {
-                box-sizing: border-box;
-                padding: 0.5%;
-                margin: 0;
-                height: 100%;
-                text-align: center;
-                font-size: 5vh;
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        .logo {
-            height: 100%;
-            aspect-ratio: 116/81;
-            box-sizing: border-box;
-            margin-left: 1%;
-            padding: 0.5%;
-        }
-    </style>
     <link rel="stylesheet" href="./css/hamburger.css">
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="" id="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <style>
+        
+    </style>
 </head>
 <body>
     <header>
@@ -50,26 +23,59 @@
             </span>
         </button>
     </header>
-    <script>
-        // Toggle Hamburger
-        var toggleNav = new Event("toggleNav")
-
-        $(".hamburger--spin").on("click", () => {
-            $(".hamburger--spin").toggleClass("is-active");
-            dispatchEvent(toggleNav);
-            $("html").trigger("toggleNav");
-        });
-    </script>
-    <script>
-        // Nav (test)
-        $("html").on("toggleNav", () => {
-            console.log("HALLO")
-        })
-    </script>
-    <script>
-        // GLOBAL
-        $("img, svg").on("dragstart", () => {return false;});
-        $("img, svg").attr("draggable", "false");
-    </script>
+    <nav>
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html">
+                    <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"
+                    >Home
+                </a></li>
+                <li><a href="./contact.html">
+                    <img alt="Kontakt" class="navpic" src="./img/svg/contact.svg" loading="lazy"
+                    >Vorstand | Kontakt
+                </a></li>
+                <li><a href="./teamVolley.html">
+                    <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"
+                    >Mannschaften Volleyball
+                    </a>
+                    <ul>
+                        <li><a href="./teamVolleyAmigos.html">Amigos</a></li>
+                        <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>
+                        <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>
+                        <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>
+                    </ul>
+                </li>
+                <li><a href="./riege.html">
+                    <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"
+                    >Männerriege
+                    </a>
+                    <ul>
+                        <li><a href="./riegeFaustball.html">Faustball</a></li>
+                    </ul>
+                </li>
+                <li><a href="./documents.html">
+                    <img alt="Dokuemnt" class="navpic" src="./img/svg/document.svg" loading="lazy"
+                    >Programm | Dokumente
+                </a></li>
+                <li><a  href="./photos.html">
+                    <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"
+                    >Fotogalerie
+                    </a>
+                    <ul>
+                        <li><a href="./photosAktive.html">Aktive</a></li>
+                        <li><a href="./photosJunior.html">Junioren</a></li>
+                        <li><a href="./photosRiege.html">Männerriege</a></li>
+                    </ul>
+                </li>
+                <li><a  href="./imprint.html">
+                    <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"
+                    >Impressum
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="./js/nav.js"></script>
+    <script src="./js/global.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 </html>

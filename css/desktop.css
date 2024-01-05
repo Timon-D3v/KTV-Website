@@ -1,0 +1,68 @@
+@import url(./global.css);
+
+nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0c182130;
+    opacity: 0;
+    z-index: 40;
+    pointer-events: none;
+}
+
+.nav {
+    position: relative;
+    top: 7vh;
+    left: 100vw;
+    height: 93vh;
+    width: 40vw;
+    padding: 2%;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: var(--w1);
+    pointer-events: all;
+    box-shadow: -3px 0px 2px -2px gray;
+    & > ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "Saira", sans-serif;
+        font-size: 3vh;
+        letter-spacing: 0.1rem;
+        & li {
+            color: var(--b4) !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            & ul {
+                padding-left: 14%;
+                list-style: none;
+                & li {
+                    text-overflow: ellipsis;
+                    word-wrap: break-word;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    & a {
+        text-decoration: none;
+        color: var(--b4);
+        &:hover {
+            color: var(--c2) !important;
+            & > img {
+                filter: invert(23%) sepia(55%) saturate(2432%) hue-rotate(142deg) brightness(95%) contrast(91%);
+            }
+        }
+    }
+}
+
+.navpic {
+    height: 3vh;
+    aspect-ratio: 1/1;
+    margin-right: 3%;
+    transform: translateY(0.1614em);
+}

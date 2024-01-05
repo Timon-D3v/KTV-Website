@@ -13,7 +13,8 @@
       "default",
       {
         "ignore": [
-          "scale"
+          "scale",
+          "backdrop-filter"
         ]
       }
     ],

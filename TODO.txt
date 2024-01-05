@@ -1,12 +1,5 @@
-GSAP hinzufügen
-nav mit gsap erstellen
-
-
-
 Während den nächsten beiden Zielen Essentials hinzufügen
 Für jedes design in html js files erstellen (Diese werden später verrandomt)
-Header redesignen
-Nav Redesignen
 Hero Page designen
 Weitere Elemente designen
 zusammenfügen

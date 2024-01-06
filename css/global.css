@@ -30,9 +30,14 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--b3);
 }
 
-p, a {
+p, a, label {
     font-family: "Saira", sans-serif;
     color: var(--b4);
+}
+
+.invisible {
+    clip: rect(0px, 0px, 0px, 0px);
+    display: none;
 }
 
 header {
@@ -66,4 +71,74 @@ header {
     box-sizing: border-box;
     margin-left: 1%;
     padding: 0.5%;
+}
+
+.title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::after {
+        display: block;
+        height: 0.2em;
+        width: 5em;
+        content: "";
+        background-color: var(--c8);
+    }
+}
+
+.vorstand_slider_container {
+    position: relative;
+    margin: 5em 0;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover .vorstand_slider {
+        animation-play-state: paused;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 15vw;
+        height: 100%;
+        background: linear-gradient(to left, transparent, white);
+        z-index: 2;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 15vw;
+        height: 100%;
+        background: linear-gradient(to right, transparent, white);
+    }
+}
+
+.vorstand_slider {
+    display: inline-block;
+    animation: 50s slider infinite linear;
+    & img {
+        height: 50vh;
+        border-top-right-radius: 2.5vh;
+        border-top-left-radius: 2.5vh;
+    }
+}
+
+.slide_element {
+    display: inline-block;
+    margin: 0 5vh;
+    text-align: center;
+    background-color: var(--c6);
+    border-radius: 2.5vh;
+}
+
+@keyframes slider {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }

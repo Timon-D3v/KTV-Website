@@ -361,3 +361,11 @@ main {
     color: white;
     margin: 0;
 }
+
+.desktop_only {
+    display: none;
+}
+
+.mobile_fontsize1 {
+    font-size: 4vh;
+}

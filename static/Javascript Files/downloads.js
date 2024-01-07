@@ -85,3 +85,7 @@ function downloadJunioren() {
             console.error("Error fetching the file:", error);
         });
 };
+
+$("#download___jahresprogramm").on("click", downloadJahresprogramm);
+$("#download___organigramm").on("click", downloadOrganigramm);
+$("#download___junioren").on("click", downloadJunioren);

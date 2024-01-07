@@ -65,7 +65,18 @@
         });
 
         document.getElementById("copy_result").addEventListener("click", () => {
+            output += '        <footer>\n\
+            <div class="upper_footer">\n\
+                <a href="./imprint.html">Impressum</a>\n\
+                <p>|</p>\n\
+                <a href="http://lippuner.internet-box.ch:8080">Developper</a>\n\
+            </div>\n\
+            <p class="lower_footer">Copyright © 2024 Volleyball KTV Altstetten | Alle Rechte vorbehalten</p>\n\
+        </footer>\n\
+    </body>\n\
+</html>'
             navigator.clipboard.writeText(output);
+            console.log(output);
             document.getElementById("copy_result").innerText = "Kopiert";
         });
 
@@ -76,7 +87,7 @@
         document.getElementById("c_finish_head").addEventListener("click", () => {
             let desc = document.getElementById("i_desc").value,
                 title = document.getElementById("i_title").value,
-                custom_icon = '        <link href="./img/logo.jpg" rel="icon" type="image/x-icon">\n';
+                custom_icon = '        <link href="./img/icon.jpg" rel="icon" type="image/x-icon">\n';
             if (document.getElementById("i_custom_icon").checked) {
                 custom_icon = '        <link href="' + document.getElementById("custom_icon").value + '" rel="icon" type="image/x-icon">\n';
             };
@@ -111,66 +122,62 @@
 
         $("#c_header").on("click", () => {
             let title = $("#i_page_title").val();
-            output += '    <header>\n\
-        <img alt="Logo" src="./img/logo.png" class="logo">\n\
-        <h1>' + title + '</h1>\n\
-        <button class="hamburger hamburger--spin" type="button">\n\
-            <span class="hamburger-box">\n\
-                <span class="hamburger-inner"></span>\n\
-            </span>\n\
-        </button>\n\
-    </header>\n\
-    <nav>\n\
-        <div class="nav">\n\
-            <ul>\n\
-                <li><a href="./index.html">\n\
-                    <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"\n\
-                    >Home\n\
-                </a></li>\n\
-                <li><a href="./contact.html">\n\
-                    <img alt="Kontakt" class="navpic" src="./img/svg/contact.svg" loading="lazy"\n\
-                    >Vorstand | Kontakt\n\
-                </a></li>\n\
-                <li><a href="./teamVolley.html">\n\
-                    <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"\n\
-                    >Mannschaften Volleyball\n\
-                    </a>\n\
-                    <ul>\n\
-                        <li><a href="./teamVolleyAmigos.html">Amigos</a></li>\n\
-                        <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>\n\
-                        <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>\n\
-                        <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>\n\
-                    </ul>\n\
-                </li>\n\
-                <li><a href="./riege.html">\n\
-                    <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"\n\
-                    >Männerriege\n\
-                    </a>\n\
-                    <ul>\n\
-                        <li><a href="./riegeFaustball.html">Faustball</a></li>\n\
-                    </ul>\n\
-                </li>\n\
-                <li><a href="./documents.html">\n\
-                    <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"\n\
-                    >Programm | Dokumente\n\
-                </a></li>\n\
-                <li><a  href="./photos.html">\n\
-                    <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"\n\
-                    >Fotogalerie\n\
-                    </a>\n\
-                    <ul>\n\
-                        <li><a href="./photosAktive.html">Aktive</a></li>\n\
-                        <li><a href="./photosJunior.html">Junioren</a></li>\n\
-                        <li><a href="./photosRiege.html">Männerriege</a></li>\n\
-                    </ul>\n\
-                </li>\n\
-                <li><a  href="./imprint.html">\n\
-                    <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"\n\
-                    >Impressum\n\
-                </a></li>\n\
-            </ul>\n\
-        </div>\n\
-    </nav>\n'
+            output += '        <header>\n\
+            <img alt="Logo" src="./img/logo.png" class="logo">\n\
+            <h1>' + title + '</h1>\n\
+            <button class="hamburger hamburger--spin" type="button">\n\
+                <span class="hamburger-box">\n\
+                    <span class="hamburger-inner"></span>\n\
+                </span>\n\
+            </button>\n\
+        </header>\n\
+        <nav>\n\
+            <div class="nav">\n\
+                <ul>\n\
+                    <li><a href="./index.html">\n\
+                        <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"\n\
+                        >Home\n\
+                    </a></li>\n\
+                    <li><a href="./teamVolley.html">\n\
+                        <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"\n\
+                        >Mannschaften Volleyball\n\
+                        </a>\n\
+                        <ul>\n\
+                            <li><a href="./teamVolleyAmigos.html">Amigos</a></li>\n\
+                            <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>\n\
+                            <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>\n\
+                            <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>\n\
+                        </ul>\n\
+                    </li>\n\
+                    <li><a href="./riege.html">\n\
+                        <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"\n\
+                        >Männerriege\n\
+                        </a>\n\
+                        <ul>\n\
+                            <li><a href="./riegeFaustball.html">Faustball</a></li>\n\
+                        </ul>\n\
+                    </li>\n\
+                    <li><a href="./documents.html">\n\
+                        <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"\n\
+                        >Programm | Dokumente\n\
+                    </a></li>\n\
+                    <li><a  href="./photos.html">\n\
+                        <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"\n\
+                        >Fotogalerie\n\
+                        </a>\n\
+                        <ul>\n\
+                            <li><a href="./photosAktive.html">Aktive</a></li>\n\
+                            <li><a href="./photosJunior.html">Junioren</a></li>\n\
+                            <li><a href="./photosRiege.html">Männerriege</a></li>\n\
+                        </ul>\n\
+                    </li>\n\
+                    <li><a  href="./imprint.html">\n\
+                        <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"\n\
+                        >Impressum\n\
+                    </a></li>\n\
+                </ul>\n\
+            </div>\n\
+        </nav>\n'
             $("#c_header").text("Erledigt!");
         });
     </script>

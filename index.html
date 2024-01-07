@@ -6,54 +6,216 @@
         <meta name="Owner" content="Timon Fiedler">
         <meta name="Developper" content="Timon Fiedler">
         <meta name="Alias" content="timon.dev">
-        <meta name="Last modified" content="26.06.23 12:20">
+        <meta name="Last modified" content="Sun Jan 07 2024 12:53:26 GMT+0100 (Mitteleuropäische Normalzeit)">
         <title>Home | KTV Altstetten</title>
         <meta name="description" content="Auf dieser Website findet ihr alles, was den KTV Volley Altstetten betrifft...">
         <meta property="og:title" content="KTV Altstetten">
         <meta property="og:url" content="https://ktv-altstetten.ch/">
-        <meta property="og:description" content="Auf dieser Website findest du alles, was den KTV Altstetten betrifft...">
-        <meta property="og:image" content="static/Pictures/indexLogo.png">
-        <meta property="og:image:type" content="image/png">      
+        <meta property="og:description" content="Auf dieser Website findet ihr alles, was den KTV Volley Altstetten betrifft...">
+        <meta property="og:image" content="./img/icon.jpg">
+        <meta property="og:image:type" content="image/png">
         <meta name="google" content="nositelinkssearchbox">
         <meta name="robots" content="index,follow">
-        <link href="static/Icons/icon.jpg" rel="icon" type="image/x-icon">
-        <link href="static/Stylesheet Files/style.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleTopbar.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleIndex.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleNavbar.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleFooter.css" rel="stylesheet" type="text/css">
+        <link href="./img/icon.jpg" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="./css/hamburger.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="" id="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script type="text/javascript" src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script type="text/javascript" src="./js/global.js" defer></script>
+        <script type="text/javascript" src="./js/header.js" defer></script>
+        <script type="text/javascript" src="./js/nav.js" defer></script>
+        <script type="text/javascript" src="./js/preload_and_typed.js" defer></script>
+        <script type="text/javascript" src="./js/email.js" defer></script>
     </head>
-
     <body>
-        <header id="header"></header>
-        
-        <nav class="navbarOff" id="navbar"></nav>
-
+        <header>
+            <img alt="Logo" src="./img/logo.png" class="logo">
+            <h1>Home</h1>
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </header>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">
+                        <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"
+                        >Home
+                    </a></li>
+                    <li><a href="./teamVolley.html">
+                        <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"
+                        >Mannschaften Volleyball
+                        </a>
+                        <ul>
+                            <li><a href="./teamVolleyAmigos.html">Amigos</a></li>
+                            <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>
+                            <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>
+                            <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./riege.html">
+                        <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"
+                        >Männerriege
+                        </a>
+                        <ul>
+                            <li><a href="./riegeFaustball.html">Faustball</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./documents.html">
+                        <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"
+                        >Programm | Dokumente
+                    </a></li>
+                    <li><a  href="./photos.html">
+                        <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"
+                        >Fotogalerie
+                        </a>
+                        <ul>
+                            <li><a href="./photosAktive.html">Aktive</a></li>
+                            <li><a href="./photosJunior.html">Junioren</a></li>
+                            <li><a href="./photosRiege.html">Männerriege</a></li>
+                        </ul>
+                    </li>
+                    <li><a  href="./imprint.html">
+                        <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"
+                        >Impressum
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
         <main>
-            <section class="mainSection">
-                <p>Auf dieser Website findet ihr alles, was den KTV Altstetten betrifft...</p>
-                <img alt="Logo" class="indexLogo" src="static/Pictures/indexLogo.png">
-            </section>
-            <div class="placeholderIndex" style="height: 100px;"></div>
+            <div class="hero">
+                <h1 class="hero_title">Wir sind<br>
+                    <span id="hero_title"></span>
+                </h1>
+                <div id="hero_text">
+                    <p>KTV Altstetten</p>
+                    <p>Amigos</p>
+                    <p>Junior*innen</p>
+                    <p>Pallavolo Capelli due</p>
+                    <p>Vollgas</p>
+                    <p>eine Männerriege</p>
+                </div>
+                <a class="call_to_action" href="#emailUs">Kontaktiere uns!</a>
+            </div>
+            <div class="vorstand">
+                <h1 class="title">Vorstand</h1>
+                <div class="vorstand_slider_container">
+                    <div class="vorstand_slider">
+                        <div class="slide_element">
+                            <img alt="Präsident Renato Fagetti" src="./img/common/president.jpg">
+                            <h4>Präsident</h4>
+                            <p>Renato Fagetti</p>
+                            <p>E-Mail: renato.fagetti@vtxmail.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Techn. Leiterin_Sabine Schuhmacher" src="./img/common/tech.jpg">
+                            <h4>Technische Leiterin</h4>
+                            <p>Sabine Schuhmacher</p>
+                            <p>E-Mail: sabine.schuhmacher@gmx.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Kassier Jacqueline Fisch" src="./img/common/cashier.JPG">
+                            <h4>Kassier</h4>
+                            <p>Jacqueline Fisch</p>
+                            <p>E-Mail: jackie.fisch@gmx.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Obmann Gery Flatt" src="./img/common/obmann.JPG">
+                            <h4>Obmann</h4>
+                            <p>Gery Flatt</p>
+                            <p>E-Mail: gerhard.flatt@bluewin.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Aktuar Adrian Stutz" src="./img/common/aktuar.jpg">
+                            <h4>Aktuar</h4>
+                            <p>Adrian Stutz</p>
+                            <p>E-Mail: a-d-stutz@mail.ch</p>
+                        </div>
+                    </div>
+                    <div class="vorstand_slider">
+                        <div class="slide_element">
+                            <img alt="Präsident Renato Fagetti" src="./img/common/president.jpg">
+                            <h4>Präsident</h4>
+                            <p>Renato Fagetti</p>
+                            <p>E-Mail: renato.fagetti@vtxmail.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Techn. Leiterin_Sabine Schuhmacher" src="./img/common/tech.jpg">
+                            <h4>Technische Leiterin</h4>
+                            <p>Sabine Schuhmacher</p>
+                            <p>E-Mail: sabine.schuhmacher@gmx.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Kassier Jacqueline Fisch" src="./img/common/cashier.JPG">
+                            <h4>Kassier</h4>
+                            <p>Jacqueline Fisch</p>
+                            <p>E-Mail: jackie.fisch@gmx.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Obmann Gery Flatt" src="./img/common/obmann.JPG">
+                            <h4>Obmann</h4>
+                            <p>Gery Flatt</p>
+                            <p>E-Mail: gerhard.flatt@bluewin.ch</p>
+                        </div>
+                        <div class="slide_element">
+                            <img alt="Aktuar Adrian Stutz" src="./img/common/aktuar.jpg">
+                            <h4>Aktuar</h4>
+                            <p>Adrian Stutz</p>
+                            <p>E-Mail: a-d-stutz@mail.ch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="eUDiv">
+                    <form id="emailUs" class="eUForm">
+                        <div class="eUFormDescription">
+                            <h1>Kontaktiere Uns!</h1>
+                        </div>
+                        <div class="eUInputDiv">
+                            <input type="text" required id="autorName" class="eUNameInput" autocomplete="name">
+                            <label for="autorName" class="eUNameLabel">Name</label>
+                        </div>
+                        <div class="eUInputDiv">
+                            <input type="email" required id="autorEmail" class="eUEmailInput" autocomplete="email">
+                            <label for="autorEmail" class="eUEmailLabel">E-Mail</label>
+                        </div>
+                        <div class="eUInputDiv">
+                            <textarea name="emailText" form="emailUs" required id="emailText" class="eUMessageInput"></textarea>
+                            <label for="emailText" class="eUMessageLabel">Nachricht</label>
+                        </div>
+                        <div class="eUCheckbox">
+                            <label for="emailUsFormCheckbox" class="eUCheckLabel">
+                                <input type="checkbox" name="emailUsFormCheckbox" id="emailUsFormCheckbox" class="eUCheckInput" required>
+                                <svg class="eUCheckSVG" viewBox="0 0 64 64" height="1em" width="1em">
+                                    <path class="eUCheckSVGPath" d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938"></path>
+                                </svg><span class="invisible">Check</span>
+                            </label>
+                            <p class="eUAgreement">Ich bin einverstanden, dass meine Daten verschickt werden. 
+                                <span class="eUAgreementDetails" id="showAgreement">Mehr Informationen</span>
+                            </p>
+                            <div class="eUFullAgreement invisible" id="eUFullAgreement">
+                                <p class="eUFullAgreementP">Das versenden dieser Mail verschickt deine Angaben über das Internet an eine dritte Seite weiter, deren Sicherheit der KTV Altstetten nicht gewährleisten kann.</p>
+                            </div>
+                        </div>
+                        <input type="submit" id="sendEmail" value="Nachricht Senden →" class="eUSubmit">
+                        <div id="emailUsStatus"></div>
+                    </form>
+                </div>
+            </div>
         </main>
-
-        <footer id="footer">
-            <div class="footerDiv" id="footerDiv"></div>
-            <div class="scriptMeta">
-                <p id="currentSiteNameDE">Index</p>
-                <p id="currentSiteNameEN">Index</p>
-                <p id="currentSiteTitle">Homepage</p>
-                <p id="currentSiteType">Index</p>
-                <p id="currentFilename">index.html</p>
+        <footer>
+            <div class="upper_footer">
+                <a href="./imprint.html">Impressum</a>
+                <p>|</p>
+                <a href="http://lippuner.internet-box.ch:8080">Developper</a>
             </div>
-            <div class="scripts">
-                <script src="static/Javascript Files/baseBuilder.js"></script>
-                <script src="static/Javascript Files/navbarToggle.js"></script>
-                <script src="static/Javascript Files/topbarIconHover.js"></script>
-                <script src="static/Javascript Files/navbarDetailOpen.js"></script>
-                <script src="static/Javascript Files/footerSpacing.js"></script>
-            </div>
+            <p class="lower_footer">Copyright © 2024 Volleyball KTV Altstetten | Alle Rechte vorbehalten</p>
         </footer>
-
     </body>
 </html>

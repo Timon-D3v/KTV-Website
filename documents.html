@@ -20,16 +20,20 @@
         <link rel="stylesheet" href="./css/hamburger.css">
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="" id="stylesheet">
+        <!-- Maybe do a synthesis to move the essentials or just sync with javascript
+        <link rel="stylesheet" href="./css/tablet.css" media="(max-width: 800px)">
+        <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 400px)"> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <script type="text/javascript" src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
         <script type="text/javascript" src="./js/global.js" defer></script>
+        <script type="text/javascript" src="./js/docs.js" defer></script>
     </head>
     <body>
         <header>
             <img alt="Logo" src="./img/logo.png" class="logo">
-            <h1><span class="desktop_only">Programm | </span><span class="mobile_fontsize1">Dokumente</span></h1>
+            <h1><span class="desktop_only">Programm|</span><span class="mobile_fontsize1">Dokumente</span></h1>
             <button class="hamburger hamburger--spin" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
@@ -85,17 +89,6 @@
         </nav>
         <main>
             <style>
-                .jahresprogramm iframe {
-                    padding: 2vh 10vw;
-                    box-sizing: border-box;
-                    width: 100%;
-                    height: 80vh;
-                    border: none;
-                    background-image: url(./img/backup/jahresprogramm.jpg);
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: 70vw 70vh;
-                }
             </style>
             <div class="jahresprogramm">
                 <h1 class="title">Unser Jahresprogramm</h1>
@@ -103,6 +96,24 @@
             </div>
             <div class="other_files">
                 <h1 class="title">Dokumente</h1>
+                <p class="untertitel">Das sind unsere Dokumente. Lade sie dir gerne herunter...</p>
+                <div class="content">
+                    <a class="download" href="#">
+                        <iframe title="Organigramm" src="./public/Organigramm 2021.pdf"></iframe>
+                        <h2>Organigramm</h2>
+                        <p>Das ist unser Organigramm. Es stellt die interne Struktur des Vereins dar.</p>
+                    </a>
+                    <a class="download" href="#">
+                        <iframe title="Jahresprogramm" src="./public/Jahresprogramm 2022.pdf"></iframe>
+                        <h2>Programm</h2>
+                        <p>Das ist unser Jahresprogramm. Es zeigt alle Events und Termine des Vereins.</p>
+                    </a>
+                    <a class="download" href="#">
+                        <iframe title="Junioren" src="./public/Junioren Volleyball.pdf"></iframe>
+                        <h2>Junioren Flyer</h2>
+                        <p>Bist du oder dein Kind an Volleyball interessiert? Dann melde dich hier!</p>
+                    </a>
+                </div>
             </div>
         </main>
         <footer>

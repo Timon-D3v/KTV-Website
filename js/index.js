@@ -1,15 +1,18 @@
-const images = [
-    [".hero", "./img/stock/hero.jpg"]
+const dw = window.innerWidth,
+      dh = window.innerHeight,
+      ik = "https://ik.imagekit.io/timondev/ktv",
+      images = [
+        [".hero", "/stock/min", "/hero.jpg"]
 ];
 
 $(() => {
     images.forEach((e, i) => {
         let img = new Image(1, 1);
-        img.src = e[1];
         if (i === 0 && device === "mobile") {
-            e[1] = e[1].replace(".jpg", "") + "_mobile.jpg";
+            e[2] = e[2].replace(".jpg", "") + "_mobile.jpg";
         };
-        img.onload = () => $(e[0]).css("background-image", "url(" + e[1] + ")");
+        img.src = ik + e[1] + `/tr:w-${dw},h-${dh}` + e[2];
+        img.onload = () => $(e[0]).css("background-image", "url(" + img.src + ")");
     });
 });
 

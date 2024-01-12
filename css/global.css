@@ -36,6 +36,12 @@ p, a, label {
     color: var(--b4);
 }
 
+main::after {
+    display: block;
+    content: "";
+    height: 5vh;
+}
+
 .invisible {
     clip: rect(0px, 0px, 0px, 0px);
     display: none;

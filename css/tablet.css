@@ -451,7 +451,7 @@ main {
         top: calc(100% - 5vh);
         width: 100%;
         height: 5vh;
-        background-image: url(../img/sv/wave1.svg);
+        background-image: url(../img/svg/wave1.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -480,7 +480,7 @@ main {
     margin: 5em 0;
     overflow: hidden;
     white-space: nowrap;
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
     &::before {
@@ -509,8 +509,7 @@ main {
     animation: 50s slider infinite linear;
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -527,7 +526,7 @@ main {
     margin: 5em 0;
     overflow: hidden;
     white-space: nowrap;
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
     &::before {
@@ -556,8 +555,7 @@ main {
     animation: 50s slider infinite linear;
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -574,7 +572,7 @@ main {
     margin: 5em 0;
     overflow: hidden;
     white-space: nowrap;
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
     &::before {
@@ -603,8 +601,7 @@ main {
     animation: 50s slider infinite linear;
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -622,7 +619,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -654,8 +651,7 @@ main {
 
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -673,7 +669,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -705,8 +701,7 @@ main {
 
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -724,7 +719,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -756,8 +751,7 @@ main {
 
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -775,7 +769,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -807,8 +801,7 @@ main {
 
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 .auto2LO0VxGpWit2J0EpVEbR {
@@ -825,7 +818,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -876,7 +869,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 
@@ -908,8 +901,7 @@ main {
 
     & img {
         height: 50vh;
-        border-top-right-radius: 2.5vh;
-        border-top-left-radius: 2.5vh;
+        border-radius: 2.5vh;
     }
 }
 
@@ -927,7 +919,7 @@ main {
     overflow: hidden;
     white-space: nowrap;
 
-    &:hover .vorstand_slider {
+    &:hover div {
         animation-play-state: paused;
     }
 

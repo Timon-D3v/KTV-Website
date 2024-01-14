@@ -11,6 +11,7 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="C:\Users\fiedl\OneDrive\Programmieren\KTV Website\build\tozip\dist\jszip.js"></script>
 </head>
 <body>
     <h1>Anfang generieren (Head)</h1>
@@ -40,6 +41,32 @@
 
     <button type="button" id="c_header">Hinzufügen</button>
 
+    <h1>Hero Page</h1>
+    <label for="hero_img">Hero Image</label><br>
+    <input id="hero_img" name="hero_img" type="file"><br><br>
+
+    <label for="hero_title">Hero Title</label><br>
+    <input type="text" id="hero_title" name="hero_title"><br><br>
+    
+    <button type="button" id="submit_hero">Hinzufügen</button><br>
+
+    <div class="sss">
+    
+    <h1>Slider</h1>
+    
+    <label for="slider_number">How many Pictures?</label>
+    <input id="silder_number" name="slider_number" type="number">
+    <label for="slider_want_header">Titel?</label>
+    <input type="checkbox" name="slider_want_header" id="slider_want_header">
+    <label for="slider_want_p">Text?</label>
+    <input type="checkbox" name="slider_want_p" id="slider_want_p">
+    <button type="button" id="slider_number_enter">Enter</button>
+    <div id="slider_number_holder"></div>
+    <button type="button" id="addSliderFinal">Hinzufügen</button>
+    
+    </div>
+    <style>.sss {display: flex; flex-direction: column; align-items: start; & * {margin: 2vh 0;}}</style>
+
     <h1>Abschluss</h1>
     <button type="button" id="copy_result">Resultat kopieren</button>
 
@@ -49,7 +76,113 @@
     <script>
         // build your site
 
-        let output = "";
+        var output = "", style = "", styleM = "", styleT = "", js = [""], uploadedImg = [];
+        
+function addSlider () {
+    let num = 0,
+    finisher = true;
+    while (finisher) {
+        if (document.getElementById("s_pics" + num.toString())) {
+            num++
+        } else {
+            finisher = false;
+        };
+    };
+    let he, pa;
+    document.getElementById("slider_want_header").checked ? he = true : he = false;
+    document.getElementById("slider_want_p").checked ? pa = true : pa = false;
+    let ids = [];
+    for (let i = 0; i < num; i++) {
+        ids.push(randomId());
+    };
+    let extraIDs = [randomId(), randomId(), randomId()];
+    let start = '        <div class="'+extraIDs[0]+'">\n\
+            <div class="'+extraIDs[1]+'">\n',
+    mid = '            </div>\n\
+            <div class="'+extraIDs[1]+'">\n',
+    end = '            </div>\n\
+        </div>\n';
+    let res = "";
+    for (let i = 0; i < num; i++) {
+        res += '                <div class="'+extraIDs[2]+'">\n';
+        res += '                    <img alt="Auto Generated" src="./img/common/'+ids[i]+'.png">\n';
+        he ? res += '                    <h4>'+document.getElementById("s_header" + i.toString()).value+'</h4>\n' : res = res;
+        pa ? res += '                    <p>'+document.getElementById("s_par" + i.toString()).value+'</p>\n' : res = res;
+        res += '                </div>\n';
+        let b = "s_pics" + i.toString();
+        uploadImage(b, ids[i]);
+    };
+    output += start + res + mid + res + end;
+    let a = '.'+extraIDs[0]+' {\n\
+    position: relative;\n\
+    margin: 5em 0;\n\
+    overflow: hidden;\n\
+    white-space: nowrap;\n\
+    &:hover .vorstand_slider {\n\
+        animation-play-state: paused;\n\
+    }\n\
+    &::before {\n\
+        position: absolute;\n\
+        top: 0;\n\
+        left: 0;\n\
+        content: "";\n\
+        width: 15vw;\n\
+        height: 100%;\n\
+        background: linear-gradient(to left, transparent, var(--w1));\n\
+        z-index: 2;\n\
+    }\n\
+    &::after {\n\
+        position: absolute;\n\
+        top: 0;\n\
+        right: 0;\n\
+        content: "";\n\
+        width: 15vw;\n\
+        height: 100%;\n\
+        background: linear-gradient(to right, transparent, var(--w1));\n\
+    }\n\
+}\n\
+\n\
+.'+extraIDs[1]+' {\n\
+    display: inline-block;\n\
+    animation: 50s slider infinite linear;\n\
+    & img {\n\
+        height: 50vh;\n\
+        border-top-right-radius: 2.5vh;\n\
+        border-top-left-radius: 2.5vh;\n\
+    }\n\
+}\n\
+\n\
+.'+extraIDs[2]+' {\n\
+    display: inline-block;\n\
+    margin: 0 5vh;\n\
+    text-align: center;\n\
+    background-color: var(--c6);\n\
+    border-radius: 2.5vh;\n\
+}\n\n';
+    style += a;
+    styleM += a;
+    styleT += a;
+};
+
+$("#addSliderFinal").on("click", addSlider);
+
+    $("#slider_number_enter").on("click", () => {
+        let num = document.getElementById("silder_number").value;
+        typeof num === "string" ? num = +num : num = num;
+        document.getElementById("slider_want_header").checked ? he = true : he = false;
+        document.getElementById("slider_want_p").checked ? pa = true : pa = false;
+        let f = '<input type="file" id="s_pics',
+            t = '<input type="text" id="s_header',
+            p = '<input type="text" id="s_par';
+        let full = '<h3>Bilder -> Header -> Paragraph</h3>\n';
+        for (let i = 0; i < num; i++) {
+            full += f + i.toString() + '">\n';
+            he ? full += t + i.toString() + '">\n' : full = full;
+            pa ? full += p + i.toString() + '">\n' : full = full;
+            full += "<br>"
+        };
+        document.getElementById("slider_number_holder").innerHTML = full;
+    });
 
         document.getElementById("c_head").addEventListener("click", () => {
             output += '<!DOCTYPE html>\n\
@@ -65,19 +198,21 @@
         });
 
         document.getElementById("copy_result").addEventListener("click", () => {
-            output += '        <footer>\n\
+            output += '        </main>\n        <footer>\n\
             <div class="upper_footer">\n\
                 <a href="./imprint.html">Impressum</a>\n\
                 <p>|</p>\n\
-                <a href="http://lippuner.internet-box.ch:8080">Developper</a>\n\
+                <a href="https://timondev.vip">Developper</a>\n\
             </div>\n\
             <p class="lower_footer">Copyright © 2024 Volleyball KTV Altstetten | Alle Rechte vorbehalten</p>\n\
         </footer>\n\
     </body>\n\
 </html>'
-            navigator.clipboard.writeText(output);
-            console.log(output);
+            navigator.clipboard.writeText(output + "\n\n\n Style ----------------------------------- \n\n\n" + style + "\n\n\n Style Tab ----------------------------------- \n\n\n" + styleT + "\n\n\n Style Mobile ----------------------------------- \n\n\n" + styleM);
+            console.log(output + "\n\n\n Style Desktop ----------------------------------- \n\n\n" + style + "\n\n\n Style Tab ----------------------------------- \n\n\n" + styleT + "\n\n\n Style MMobile ----------------------------------- \n\n\n" + styleT);
+            js.forEach(elm => console.log(elm));
             document.getElementById("copy_result").innerText = "Kopiert";
+            downloadImages();
         });
 
         document.getElementById("i_custom_icon").addEventListener("click", () => {
@@ -175,45 +310,214 @@
                     </a></li>\n\
                 </ul>\n\
             </div>\n\
-        </nav>\n'
+        </nav>\n\
+        <main>\n'
             $("#c_header").text("Erledigt!");
         });
+
+        function addHero (title, img) {
+            let ids = [
+                randomId(),
+                randomId()
+            ],
+            res = '            <div class="hero ' + ids[0] + '">\n\
+                <h1 class="hero_title ' + ids[1] +  '">' + title + '</h1>\n\
+            </div>\n';
+            style += '.hero.'+ids[0]+' {\n\
+    position: relative;\n\
+    height: 98vh;\n\
+    width: 100%;\n\
+    background-image: url('+img+');\n\
+    background-repeat: no-repeat;\n\
+    background-size: cover;\n\
+    background-position: center;\n\
+    -webkit-backdrop-filter: blur(10px);\n\
+    backdrop-filter: blur(10px);\n\
+    &::after {\n\
+        display: block;\n\
+        content: "";\n\
+        position: relative;\n\
+        top: calc(100% - 5vh);\n\
+        width: 100%;\n\
+        height: 5vh;\n\
+        background-image: url(./img/svg/wave1.svg);\n\
+        background-repeat: no-repeat;\n\
+        background-size: cover;\n\
+        background-position: center;\n\
+    }\n\
+}\n\
+\n\
+.hero_title.'+ids[1]+' {\n\
+    position: absolute;\n\
+    top: 25%;\n\
+    left: 20%;\n\
+    width: 60%;\n\
+    background-color: var(--w1);\n\
+    color: var(--b4);\n\
+    margin: 0;\n\
+    font-size: 10vh;\n\
+    text-align: center;\n\
+    -webkit-backdrop-filter: blur(3px);\n\
+    backdrop-filter: blur(3px);\n\
+    border-radius: calc(100vw / 64) 0 calc(100vw / 64) 0;\n\
+    padding: calc(100vw / 160);\n\
+}\n\n';
+styleM += '.hero.'+ids[0]+' {\n\
+    position: relative;\n\
+    height: 98vh;\n\
+    width: 100%;\n\
+    background-image: url('+img+');\n\
+    background-repeat: no-repeat;\n\
+    background-size: cover;\n\
+    background-position: center;\n\
+    -webkit-backdrop-filter: blur(10px);\n\
+    backdrop-filter: blur(10px);\n\
+    &::after {\n\
+        display: block;\n\
+        content: "";\n\
+        position: relative;\n\
+        top: calc(100% - 5vh);\n\
+        width: 100%;\n\
+        height: 5vh;\n\
+        background-image: url(../img/svg/wave1.svg);\n\
+        background-repeat: no-repeat;\n\
+        background-size: cover;\n\
+        background-position: center;\n\
+    }\n\
+}\n\
+\n\
+.hero_title.'+ids[1]+' {\n\
+    position: absolute;\n\
+    top: 15%;\n\
+    left: 0;\n\
+    width: 100%;\n\
+    background-color: var(--w1);\n\
+    color: var(--b4);\n\
+    margin: 0;\n\
+    font-size: 8vh;\n\
+    box-sizing: border-box;\n\
+    text-align: center;\n\
+    -webkit-backdrop-filter: blur(3px);\n\
+    backdrop-filter: blur(3px);\n\
+    border-radius: calc(100vw / 64) 0 calc(100vw / 64) 0;\n\
+    padding: calc(100vw / 160);\n\
+    word-wrap: break-word;\n\
+}\n\n';
+styleT += '.hero.'+ids[0]+' {\n\
+    position: relative;\n\
+    height: 98vh;\n\
+    width: 100%;\n\
+    background-image: url('+img+');\n\
+    background-repeat: no-repeat;\n\
+    background-size: cover;\n\
+    background-position: center;\n\
+    -webkit-backdrop-filter: blur(10px);\n\
+    backdrop-filter: blur(10px);\n\
+    &::after {\n\
+        display: block;\n\
+        content: "";\n\
+        position: relative;\n\
+        top: calc(100% - 5vh);\n\
+        width: 100%;\n\
+        height: 5vh;\n\
+        background-image: url(../img/sv/wave1.svg);\n\
+        background-repeat: no-repeat;\n\
+        background-size: cover;\n\
+        background-position: center;\n\
+    }\n\
+}\n\
+\n\
+.hero_title.'+ids[1]+' {\n\
+    position: absolute;\n\
+    top: 20%;\n\
+    left: 5%;\n\
+    width: 90%;\n\
+    background-color: var(--w1);\n\
+    color: var(--b4);\n\
+    margin: 0;\n\
+    font-size: 10vh;\n\
+    text-align: center;\n\
+    -webkit-backdrop-filter: blur(3px);\n\
+    backdrop-filter: blur(3px);\n\
+    border-radius: calc(100vw / 64) 0 calc(100vw / 64) 0;\n\
+    padding: calc(100vw / 160);\n\
+    word-wrap: break-word;\n\
+}\n\n';
+        output += res;
+        };
+
+        function randomId () {
+            let result = 'auto';
+            const char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            for (let i = 0; i < 20; i++) {
+                result += char.charAt(Math.floor(Math.random() * char.length));
+            }
+            return result;
+        };
+
+        function uploadImage(id, name) {
+        const fileInput = document.getElementById(id);
+        
+        const file = fileInput.files[0];
+        const imageName = name;
+
+        if (file && imageName) {
+            uploadedImg.push({ file, imageName });
+            console.log('Image uploaded successfully! Name: ', imageName);
+        } else {
+            alert('Please select an image and enter a name.');
+        }
+    }
+
+    function downloadImages() {
+        if (uploadedImg.length === 0) {
+            alert('No images uploaded!');
+            return;
+        }
+
+        const zip = new JSZip();
+
+        uploadedImg.forEach((image, index) => {
+            const imgData = URL.createObjectURL(image.file);
+            zip.file(`${image.imageName}.png`, image.file, { base64: true });
+        });
+
+        zip.generateAsync({ type: 'blob' }).then((content) => {
+            const zipFile = new Blob([content], { type: 'application/zip' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(zipFile);
+            link.download = 'images.zip';
+            link.click();
+        });
+    }
+
+    $("#submit_hero").on("click", () => {
+        let rand = randomId();
+        uploadImage("hero_img", rand);
+        addHero(document.getElementById("hero_title").value, "../img/common/" + rand + ".png");
+    });
     </script>
 </body>
 </html>
 
-<!--
-<div class="vorstand_slider_container">
-                    <div class="vorstand_slider">
-                        <div class="slide_element">
-                            <img alt="Präsident Renato Fagetti" src="./img/common/president.jpg">
-                            <h4>Präsident</h4>
-                            <p>Renato Fagetti</p>
-                            <p>E-Mail: renato.fagetti@vtxmail.ch</p>
-                        </div>
-                        <div class="slide_element">
-                            <img alt="Techn. Leiterin_Sabine Schuhmacher" src="./img/common/tech.jpg">
-                            <h4>Technische Leiterin</h4>
-                            <p>Sabine Schuhmacher</p>
-                            <p>E-Mail: sabine.schuhmacher@gmx.ch</p>
-                        </div>
-                        <div class="slide_element">
-                            <img alt="Kassier Jacqueline Fisch" src="./img/common/cashier.JPG">
-                            <h4>Kassier</h4>
-                            <p>Jacqueline Fisch</p>
-                            <p>E-Mail: jackie.fisch@gmx.ch</p>
-                        </div>
-                        <div class="slide_element">
-                            <img alt="Obmann Gery Flatt" src="./img/common/obmann.JPG">
-                            <h4>Obmann</h4>
-                            <p>Gery Flatt</p>
-                            <p>E-Mail: gerhard.flatt@bluewin.ch</p>
-                        </div>
-                        <div class="slide_element">
-                            <img alt="Aktuar Adrian Stutz" src="./img/common/aktuar.jpg">
-                            <h4>Aktuar</h4>
-                            <p>Adrian Stutz</p>
-                            <p>E-Mail: a-d-stutz@mail.ch</p>
-                        </div>
-                    </div>
+
+
+<!-- A container
+<div class="content">
+    <a class="download" href="#">
+        <iframe title="Organigramm" src="./public/Organigramm 2021.pdf"></iframe>
+        <h2>Organigramm</h2>
+        <p>Das ist unser Organigramm. Es stellt die interne Struktur des Vereins dar.</p>
+    </a>
+    <a class="download" href="#">
+        <iframe title="Jahresprogramm" src="./public/Jahresprogramm 2022.pdf"></iframe>
+        <h2>Programm</h2>
+        <p>Das ist unser Jahresprogramm. Es zeigt alle Events und Termine des Vereins.</p>
+    </a>
+    <a class="download" href="#">
+        <iframe title="Junioren" src="./public/Junioren Volleyball.pdf"></iframe>
+        <h2>Junioren Flyer</h2>
+        <p>Bist du oder dein Kind an Volleyball interessiert? Dann melde dich hier!</p>
+    </a>
+</div>
 -->

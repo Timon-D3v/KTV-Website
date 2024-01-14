@@ -1,0 +1,86 @@
+.hero.NvAfj8lUhjvtych1h6Un {
+    position: relative;
+    height: 98vh;
+    width: 100%;
+    background-image: url(../img/common/B2YvDwuTepLZKtsbQnoZ.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    &::after {
+        display: block;
+        content: "";
+        position: relative;
+        top: calc(100% - 5vh);
+        width: 100%;
+        height: 5vh;
+        background-image: url(../img/svg/wave1.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.hero_title.nmES0KAbaCPLCFj4mKT4 {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    background-color: var(--w1);
+    color: var(--b4);
+    margin: 0;
+    font-size: 10vh;
+    text-align: center;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border-radius: calc(100vw / 64) 0 calc(100vw / 64) 0;
+    padding: calc(100vw / 160);
+}
+
+.QECZo6mrTK9TJrpgE0G8 {
+    position: relative;
+    margin: 5em 0;
+    overflow: hidden;
+    white-space: nowrap;
+    &:hover .vorstand_slider {
+        animation-play-state: paused;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 15vw;
+        height: 100%;
+        background: linear-gradient(to left, transparent, var(--w1));
+        z-index: 2;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        width: 15vw;
+        height: 100%;
+        background: linear-gradient(to right, transparent, var(--w1));
+    }
+}
+
+.iJCJrA8y37LKCObdsfVT {
+    display: inline-block;
+    animation: 50s slider infinite linear;
+    & img {
+        height: 50vh;
+        border-top-right-radius: 2.5vh;
+        border-top-left-radius: 2.5vh;
+    }
+}
+
+.jrdt5DYtCmFOWaU606ir {
+    display: inline-block;
+    margin: 0 5vh;
+    text-align: center;
+    background-color: var(--c6);
+    border-radius: 2.5vh;
+}

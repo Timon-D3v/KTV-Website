@@ -14,7 +14,8 @@
       {
         "ignore": [
           "scale",
-          "backdrop-filter"
+          "backdrop-filter",
+          "height: fit-content"
         ]
       }
     ],

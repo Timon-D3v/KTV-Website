@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de-ch">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="Owner" content="Timon Fiedler">
+        <meta name="Developper" content="Timon Fiedler">
+        <meta name="Alias" content="timon.dev">
+        <meta name="Last modified" content="Wed Jan 17 2024 17:59:36 GMT+0100 (Mitteleuropäische Normalzeit)">
+        <title>Volleyball | KTV Altstetten</title>
+        <meta name="description" content="Alles über unsere verschiedenen Mannschaften. Falls du dich anmelden oder informieren willst bist du hier genau richtig.">
+        <meta property="og:title" content="KTV Altstetten">
+        <meta property="og:url" content="https://ktv-altstetten.ch/volleyball">
+        <meta property="og:description" content="Alles über unsere verschiedenen Mannschaften. Falls du dich anmelden oder informieren willst bist du hier genau richtig.">
+        <meta property="og:image" content="./img/icon.jpg">
+        <meta property="og:image:type" content="image/png">
+        <meta name="google" content="nositelinkssearchbox">
+        <meta name="robots" content="index,follow">
+        <link href="./img/icon.jpg" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="./css/hamburger.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="" id="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script type="text/javascript" src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script type="text/javascript" src="./js/global.js" defer></script>
+        <style>
+            /*
+            TEMP
+            */
+            .hero.autoR5wftRD1tPJzkkWNe7YD {
+                background-image: url(./img/stock/pre/ball.jpg);
+                &::after {
+                    background-image: url(./img/svg/wave1.svg);
+                }
+            }
+        </style>
+        <script defer>
+            const dw = window.innerWidth,
+                  dh = window.innerHeight,
+                  ik = "https://ik.imagekit.io/timondev/ktv",
+                  images = [
+                    [".hero", "/stock/min", "/ball.jpg"]
+            ];
+
+            $(() => {
+                images.forEach((e, i) => {
+                    let img = new Image(1, 1);
+                    img.src = ik + e[1] + `/tr:w-${dw},h-${dh}` + e[2];
+                    img.onload = () => $(e[0]).css("background-image", "url(" + img.src + ")");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <img alt="Logo" src="./img/logo.png" class="logo">
+            <h1>Volleyball</h1>
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </header>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">
+                        <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"
+                        >Home
+                    </a></li>
+                    <li><a href="./teamVolley.html">
+                        <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"
+                        >Volleyball
+                        </a>
+                        <ul>
+                            <li><a href="./teamVolleyAmigos.html">Amigos</a></li>
+                            <li><a href="./teamVolleyJunior.html">Junior*innen</a></li>
+                            <li><a href="./teamVolleyPallavolo.html">Pallavolo Capelli due</a></li>
+                            <li><a href="./teamVolleyVollgas.html">Vollgas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./riege.html">
+                        <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"
+                        >Männerriege
+                        </a>
+                        <ul>
+                            <li><a href="./riegeFaustball.html">Faustball</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./documents.html">
+                        <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"
+                        >Programm | Dokumente
+                    </a></li>
+                    <li><a  href="./photos.html">
+                        <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"
+                        >Fotogalerie
+                        </a>
+                        <ul>
+                            <li><a href="./photosAktive.html">Aktive</a></li>
+                            <li><a href="./photosJunior.html">Junioren</a></li>
+                            <li><a href="./photosRiege.html">Männerriege</a></li>
+                        </ul>
+                    </li>
+                    <li><a  href="./imprint.html">
+                        <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"
+                        >Impressum
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="hero autoR5wftRD1tPJzkkWNe7YD">
+                <h1 class="hero_title auto1Np97rw4WQxwefqfgiiQ">Volleyball</h1>
+            </div>
+            <h1 class="title">Unser Angebot</h1>
+            <div class="whyYou">
+                <p>Wir suchen laufend neue Spieler*innen in den verschiedenen Stärkeklassen.</p>
+            </div>
+            <div class="we">
+                <div class="where">
+                    <img alt="Schulhaus Kappeli" src="./img/common/kappeli.jpg">
+                    <div>
+                        <h2>Turnhalle Kappeli</h2>
+                        <p>Badenerstrasse 618<br>8048 Zürich</p>
+                        <a href="https://maps.app.goo.gl/zFgq7zvYoAeazaWm7">Google Maps</a>
+                    </div>
+                </div>
+                <div class="when"></div>
+            </div>
+            <div class="googlemaps" id="googlemaps">
+                <div class="placeholder"><img alt="placeholder" src="./static/Pictures/Map/Maps.Map.png"></div>
+            </div>
+            <style>
+                .we {
+                    display: flex;
+                }
+
+                .where {
+                    width: 100%;
+                    height: 50vh;
+                    position: relative;
+                    background-color: var(--c2);
+                    margin: 7.5vh 0;
+                    &::before, &::after {
+                        content: "";
+                        display: block;
+                        height: 2.5vh;
+                        position: absolute;
+                        width: 100vw;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                    &::before {
+                        background-image: url(./img/svg/wave4.svg);
+                        top: -2.5vh;
+                    }
+                    &::after {
+                        background-image: url(./img/svg/wave5.svg);
+                        bottom: -2.5vh;
+                    }
+                    & > img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        clip-path: polygon(0 5vh, 100% 0, 100% calc(100% - 5vh), 0 100%);
+                    }
+                    & div {
+                        position: absolute;
+                        padding: 3em;
+                        top: 10%;
+                        right: 2vw;
+                        height: 80%;
+                        aspect-ratio: 1/1;
+                        box-sizing: border-box;
+                        background-color: rgba(255, 252, 247, 0.65);
+                        border-radius: 5%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        & * {
+                            margin: 0;
+                        }
+                        & p {
+                            align-self: flex-start;
+                        }
+                        & a {
+                            background-color: #33A1FF;
+                            height: 5rem;
+                            width: 10rem;
+                            display: grid;
+                            place-items: center;
+                            text-decoration: none;
+                            font-size: 1.2rem;
+                            font-weight: 600;
+                            border-radius: 0.5rem;
+                            transform: translate(-0.2em, -0.2em);
+                            transition: all 0.2s;
+                            -webkit-box-shadow: 0.2em 0.2em 0 0 #1E5788,
+                                                inset -0.15em -0.15em 1em 0.3em rgba(0,0,0,0.4); 
+                            box-shadow: 0.2em 0.2em 0 0 #1E5788,
+                                        inset -0.15em -0.15em 1em 0.3em rgba(0,0,0,0.4);
+                            &:hover {
+                                transform: translate(0, 0);
+                                -webkit-box-shadow: 0 0 0 0 #1E5788; 
+                                box-shadow: 0 0 0 0 #1E5788;
+                            }
+                        }
+                    }
+                }
+
+                .whyYou {
+                    display: grid;
+                    place-items: center;
+                    min-height: 150px;
+                    width: 100%;
+                    margin: 3vh 0;
+                    height: max-content;
+                    background-image: url(./img/svg/wave2.svg), url(./img/svg/wave3.svg);
+                    background-repeat: repeat-x;
+                    background-position: center;
+                    background-size: contain;
+                    & > p {
+                        color: var(--b4);
+                        font-size: larger;
+                        margin: 0 5vw;
+                        text-align: center;
+                        font-weight: 500;
+                    }
+                }
+            </style>
+        </main>
+        <footer>
+            <div class="upper_footer">
+                <a href="./imprint.html">Impressum</a>
+                <p>|</p>
+                <a href="https://timondev.vip">Developper</a>
+            </div>
+            <p class="lower_footer">Copyright © 2024 Volleyball KTV Altstetten | Alle Rechte vorbehalten</p>
+        </footer>
+    </body>
+</html>

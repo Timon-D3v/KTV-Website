@@ -118,6 +118,7 @@
             <div class="whyYou">
                 <p>Wir suchen laufend neue Spieler*innen in den verschiedenen Stärkeklassen.</p>
             </div>
+            <h1 class="title">Wo findet man uns?</h1>
             <div class="we">
                 <div class="where">
                     <img alt="Schulhaus Kappeli" src="./img/common/kappeli.jpg">
@@ -127,12 +128,244 @@
                         <a href="https://maps.app.goo.gl/zFgq7zvYoAeazaWm7">Google Maps</a>
                     </div>
                 </div>
-                <div class="when"></div>
             </div>
             <div class="googlemaps" id="googlemaps">
                 <div class="placeholder"><img alt="placeholder" src="./static/Pictures/Map/Maps.Map.png"></div>
             </div>
+            <h1 class="title">Unsere Mannschaften</h1>
+            <div class="amigos">
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <p>
+                        <span class="tvtitle">Amigos</span>
+                        <span class="vtitle">Trainingszeiten:</span>
+                        <span class="vpara">Donnerstags 19:45 - 21.45 Uhr Turnhalle Kappeli</span>
+                        <span class="vtitle">Stärkeklasse: <span class="notfat">A</span></span>
+                        <span class="vpara">Kontakt: <a class="vlink" href="mailto:alex.elasmar@gmail.com">Alex El Asmer</a></span>
+                    </p>
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+            </div>
+            <div class="junioren">
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div class="overflowShadow">
+                    <p class="overflow">
+                        <span class="tvtitle">Junior*innen</span>
+                        <span class="vtitle">Trainingszeiten:</span>
+                        <span class="vpara">Montags 18:00 - 20:00 Uhr (Frühlingsferien - Herbstferien)</span>
+                        <span class="vpara">Mittwochs 18:00 - 20:00 Uhr</span>
+                        <span class="vpara">Donnerstags 18:00 - 20:00 Uhr</span>
+                        <span class="vpara">Freitags 19:30 - 21:30 Uhr (Herbstferien - Frühlingsferien)</span>
+                        <span class="vpara">Turnhalle Kappeli</span>
+                        <span class="vpara">Kontakt: <a class="vlink" href="mailto:malerfelicetti@sunrise.ch">Nicola Felicetti</a></span>
+                        <span class="vpara">Tel. 076 559 25 03</span>
+                    </p>
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+            </div>
+            <div class="pcd">
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <P>
+                        <span class="tvtitle">Pallavolo Capelli due</span>
+                        <span class="vtitle">Trainingszeiten:</span>
+                        <span class="vpara">Mittwochs 19:45 - 21:45 Uhr Turnhalle Kappeli</span>
+                        <span class="vtitle">Stärkeklasse: <span class="notfat">C2</span></span>
+                        <span class="vpara">Kontakt: <a class="vlink" href="mailto:sabine.schuhmacher@gmx.ch">Sabine Schuhmacher</a></span>
+                    </P>
+                </div>
+            </div>
+            <div class="vollgas">
+                <div>
+                    <p>
+                        <span class="tvtitle">Vollgas</span>
+                        <span class="vpara">
+                            Leider musste sich Vollgas auflösen, da zu wenige Spieler*innen gefunden wurden.
+                            Trotz einigen Niederlagen war es eine super Zeit - vor allem ausserhalb der Turnhalle!
+                        </span>
+                    </p>
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+                <div>
+                    <img src="./img/logo.png">
+                </div>
+            </div>
             <style>
+                :root {
+                    --e1: #bbffbd;
+                    --e2: #9beb82;
+                }
+
+                .overflowShadow::after {
+                    position: relative;
+                    display: block;
+                    bottom: 15%;
+                    left: 0;
+                    height: 15%;
+                    width: 100%;
+                    content: "";
+                    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 1));
+                }
+
+                .overflow {
+                    position: relative;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+                
+                .vpara {
+                    display: block;
+                }
+
+                .vtitle {
+                    display: block;
+                    font-weight: bolder;
+                    font-size: 1.1em;
+                }
+
+                .tvtitle {
+                    display: block;
+                    font-weight: bolder;
+                    font-size: 1.25em;
+                    text-align: center;
+                    line-height: 2.5;
+                }
+
+                .notfat {
+                    font-weight: normal !important;
+                }
+
+                .junioren,
+                .vollgas,
+                .amigos,
+                .pcd {
+                    height: 75vh;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-gap: 5%;
+                    place-items: center;
+                    padding: 5%;
+                    & div {
+                        height: 90%;
+                        aspect-ratio: 1/1;
+                        border-radius: 2.5vh;
+                        border: solid 0.1em var(--c1);
+                        -webkit-box-shadow: 0.2em 0.2em 0 0 var(--c1); 
+                        box-shadow: 0.2em 0.2em 0 0 var(--c1);
+                        overflow: hidden;
+                        & > p {
+                            padding: 2em;
+                            margin: 0;
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        & img {
+                            width: 105%;
+                            height: 105%;
+                            object-fit: contain;
+                            object-position: center;
+                            transform: translate(-2.5%, -2.5%);
+                        }
+                    }
+                }
+
+                .junioren {
+                    & div {
+                        background-color: var(--w4);
+                    }
+                }
+
+                .vollgas {
+                    & div {
+                        background-color: var(--w3);
+                    }
+                }
+
+                .amigos,
+                .pcd {
+                    margin: 7.5vh 0;
+                    position: relative;
+                    &::before, &::after {
+                        position: absolute;
+                        display: block;
+                        content: "";
+                        height: 5vh;
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                    }
+                }
+
+                .amigos {
+                    background-color: var(--e1);
+                    &::before {
+                        top: -5vh;
+                        background-image: url(./img/svg/wave9.svg);
+                    }
+                    &::after {
+                        bottom: -5vh;
+                        background-image: url(./img/svg/wave8.svg);
+                    }
+                    & div {
+                        background-color: #8ee174;
+                    }
+                }
+
+                .pcd {
+                    background-color: var(--e2);
+                    &::before {
+                        top: -5vh;
+                        background-image: url(./img/svg/wave6.svg);
+                    }
+                    &::after {
+                        bottom: -5vh;
+                        background-image: url(./img/svg/wave7.svg);
+                    }
+                    & div {
+                        background-color: #70e34e;
+                    }
+                }
+
+                .googlemaps {
+                    width: 100%;
+                    height: 50vh;
+                    display: grid;
+                    place-items: center;
+                    overflow: hidden;
+                }
+
                 .we {
                     display: flex;
                 }
@@ -148,7 +381,7 @@
                         display: block;
                         height: 2.5vh;
                         position: absolute;
-                        width: 100vw;
+                        width: 100%;
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: center;
@@ -188,7 +421,7 @@
                             align-self: flex-start;
                         }
                         & a {
-                            background-color: #33A1FF;
+                            background-color: var(--c3);
                             height: 5rem;
                             width: 10rem;
                             display: grid;
@@ -199,14 +432,14 @@
                             border-radius: 0.5rem;
                             transform: translate(-0.2em, -0.2em);
                             transition: all 0.2s;
-                            -webkit-box-shadow: 0.2em 0.2em 0 0 #1E5788,
+                            -webkit-box-shadow: 0.2em 0.2em 0 0 var(--c1),
                                                 inset -0.15em -0.15em 1em 0.3em rgba(0,0,0,0.4); 
-                            box-shadow: 0.2em 0.2em 0 0 #1E5788,
+                            box-shadow: 0.2em 0.2em 0 0 var(--c1),
                                         inset -0.15em -0.15em 1em 0.3em rgba(0,0,0,0.4);
                             &:hover {
                                 transform: translate(0, 0);
-                                -webkit-box-shadow: 0 0 0 0 #1E5788; 
-                                box-shadow: 0 0 0 0 #1E5788;
+                                -webkit-box-shadow: 0 0 0 0 var(--c1); 
+                                box-shadow: 0 0 0 0 var(--c1);
                             }
                         }
                     }

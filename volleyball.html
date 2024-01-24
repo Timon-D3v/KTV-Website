@@ -118,6 +118,7 @@
             <div class="whyYou">
                 <p>Wir suchen laufend neue Spieler*innen in den verschiedenen Stärkeklassen.</p>
             </div>
+            <button type="button" class="join" id="download_beitrittsdokument">Du willst uns beitreten?</button>
             <h1 class="title">Wo findet man uns?</h1>
             <div class="we">
                 <div class="where">
@@ -243,6 +244,36 @@ setInterval(nextImgPCD, 5000);
 setInterval(nextImgV, 5000);
 
 
+function downloadBeitritt() {
+    const url = window.location.href.replace(
+		/\/[^/]*$/,
+		`/public/Beitrittserklärung%20KTV%20Altstetten.pdf`
+	);
+
+	fetch(url)
+		.then((response) => response.blob())
+		.then((blob) => {
+			const link = document.createElement("a");
+			link.href = URL.createObjectURL(blob);
+
+			link.download = "Beitrittserklärung KTV Altstetten";
+
+			if (document.createEvent) {
+				const event = document.createEvent("MouseEvents");
+				event.initEvent("click", true, true);
+				link.dispatchEvent(event);
+			} else {
+				link.click();
+			}
+		})
+		.catch((error) => {
+			console.error("Error fetching the file:", error);
+		});
+};
+
+$("#download_beitrittsdokument").on("click", downloadBeitritt);
+
+
                 </script>
             </div>
             <div class="vollgas">
@@ -310,6 +341,24 @@ setInterval(nextImgV, 5000);
 
                 .notfat {
                     font-weight: normal !important;
+                }
+
+                .join {
+                    margin: 0 0 5vh 50%;
+                    transform: translateX(-50%);
+                    border: none;
+                    border-radius: 0.5vh;
+                    background-color: var(--c6);
+                    text-align: center;
+                    padding: 1vh 2vw;
+                    font-size: 3vh;
+                    font-weight: 600;
+                    &:hover {
+                        background-color: var(--c8);
+                    }
+                    &:active {
+                        background-color: var(--c5);
+                    }
                 }
 
                 .junioren,

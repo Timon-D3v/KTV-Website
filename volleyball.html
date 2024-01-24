@@ -135,7 +135,7 @@
             <h1 class="title">Unsere Mannschaften</h1>
             <div class="amigos">
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Amigos Spieler" src="./img/common/amigos (1).jpg">
                 </div>
                 <div>
                     <p>
@@ -147,18 +147,18 @@
                     </p>
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Amigos Spieler" src="./img/common/amigos (2).jpg">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Amigos Spieler" src="./img/common/amigos (3).jpg">
                 </div>
             </div>
             <div class="junioren">
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Unsere Junior*innen" src="./img/common/jun (1).jpg">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Unsere Junior*innen" src="./img/common/jun (3).jpg">
                 </div>
                 <div class="overflowShadow">
                     <p class="overflow">
@@ -174,18 +174,18 @@
                     </p>
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Unsere Junior*innen" src="./img/common/jun (4).jpg">
                 </div>
             </div>
             <div class="pcd">
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="'Pallavolo Capelli Due' Spieler" src="./img/common/pcd (1).jpg" loading="lazy" id="img_pcd1">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="'Pallavolo Capelli Due' Spieler" src="./img/common/pcd (3).jpg" loading="lazy" id="img_pcd2">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="'Pallavolo Capelli Due' Spieler" src="./img/common/pcd (2).jpg" loading="lazy" id="img_pcd3">
                 </div>
                 <div>
                     <P>
@@ -196,6 +196,54 @@
                         <span class="vpara">Kontakt: <a class="vlink" href="mailto:sabine.schuhmacher@gmx.ch">Sabine Schuhmacher</a></span>
                     </P>
                 </div>
+                <script>
+const img = [];
+      img2 = [];
+
+for (let i = 0; i < 9; i++) {
+    if (i < 6) {
+        img[i] = new Image(1, 1);
+        img[i].src = "./img/common/pcd (" + (i + 1).toString() + ").jpg";
+    };
+    img2[i] = new Image(1, 1);
+    img2[i].src = "./img/common/vollgas (" + (i + 1).toString() + ").jpg";
+};
+
+img[1].src = "./img/common/pcd (3).jpg";
+img[2].src = "./img/common/pcd (2).jpg";
+
+var i = 3,
+    j = 3;
+
+function nextImgPCD () {
+    if (i === 0 || i === 3) {
+        $("#img_pcd1").attr("src", img[i].src);
+    } else if (i === 1 || i === 4) {
+        $("#img_pcd2").attr("src", img[i].src);
+    } else {
+        $("#img_pcd3").attr("src", img[i].src);
+    };
+    i++;
+    i > 5 ? i = 0 : i = i;
+};
+
+function nextImgV () {
+    if (j === 0 || j === 3 || j === 6) {
+        $("#img_v1").attr("src", img2[j].src);
+    } else if (j === 1 || j === 4 || j === 7) {
+        $("#img_v2").attr("src", img2[j].src);
+    } else {
+        $("#img_v3").attr("src", img2[j].src);
+    };
+    j++;
+    j > 8 ? j = 0 : j = j;
+};
+
+setInterval(nextImgPCD, 5000);
+setInterval(nextImgV, 5000);
+
+
+                </script>
             </div>
             <div class="vollgas">
                 <div>
@@ -208,13 +256,13 @@
                     </p>
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Team Vollgas" src="./img/common/vollgas (1).jpg" loading="lazy" id="img_v1">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Team Vollgas" src="./img/common/vollgas (2).jpg" loading="lazy" id="img_v2">
                 </div>
                 <div>
-                    <img src="./img/logo.png">
+                    <img alt="Team Vollgas" src="./img/common/vollgas (3).jpg" loading="lazy" id="img_v3">
                 </div>
             </div>
             <style>

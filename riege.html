@@ -1,59 +1,152 @@
 <!DOCTYPE html>
-
 <html lang="de-ch">
     <head>
-        <title>######## Titel ######## | KTV Altstetten</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="Owner" content="Timon Fiedler">
         <meta name="Developper" content="Timon Fiedler">
         <meta name="Alias" content="timon.dev">
-        <meta name="Last modified" content="######## Uhrzeit und Datum ########">
-        <meta name="description" content="######## Beschreibung ########">
+        <meta name="Last modified" content="Wed Jan 24 2024 14:57:00 GMT+0100 (Mitteleuropäische Normalzeit)">
+        <title>Männerriege | KTV Altstetten</title>
+        <meta name="description" content="Alles über die Männerriege und Faustballangebot. Falls du dich anmelden oder informieren willst bist du hier genau richtig.">
         <meta property="og:title" content="KTV Altstetten">
-        <meta property="og:url" content="https://ktv-altstetten.ch/ ######## Site Link ########">
-        <meta property="og:description" content="######## Beschreibung nochmal (Für social media links) ########">
-        <meta property="og:image" content="static/Pictures/indexLogo.png">
-        <meta property="og:image:type" content="image/png">      
+        <meta property="og:url" content="https://ktv-altstetten.ch/riege">
+        <meta property="og:description" content="Alles über die Männerriege und Faustballangebot. Falls du dich anmelden oder informieren willst bist du hier genau richtig.">
+        <meta property="og:image" content="./img/icon.jpg">
+        <meta property="og:image:type" content="image/png">
         <meta name="google" content="nositelinkssearchbox">
         <meta name="robots" content="index,follow">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
-        <link href="static/Icons/icon.jpg" rel="icon" type="image/x-icon">
-        <link href="static/Stylesheet Files/style.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleTopbar.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleNavbar.css" rel="stylesheet" type="text/css">
-        <link href="static/Stylesheet Files/styleFooter.css" rel="stylesheet" type="text/css">
+        <link href="./img/icon.jpg" rel="icon" type="image/x-icon">
+        <link rel="stylesheet" href="./css/hamburger.css">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="" id="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+        <script type="text/javascript" src="./js/global.js" defer></script>
+        <script type="text/javascript" src="./js/riege.js" defer></script>
     </head>
-
     <body>
-        <header id="header"></header>
-        
-        <nav class="navbarOff" id="navbar"></nav>
-
+        <header>
+            <img alt="Logo" src="./img/logo.png" class="logo">
+            <h1>Riege</h1>
+            <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </header>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html">
+                        <img alt="Home" class="navpic" src="./img/svg/home.svg" loading="lazy"
+                        >Home
+                    </a></li>
+                    <li><a href="./teamVolley.html">
+                        <img alt="Volleyball" class="navpic" src="./img/svg/volleyball.svg" loading="lazy"
+                        >Volleyball
+                        </a>
+                    </li>
+                    <li><a href="./riege.html">
+                        <img alt="Faustball" class="navpic" src="./img/svg/fistball.svg" loading="lazy"
+                        >Männerriege
+                        </a>
+                    </li>
+                    <li><a href="./documents.html">
+                        <img alt="Dokument" class="navpic" src="./img/svg/document.svg" loading="lazy"
+                        >Programm | Dokumente
+                    </a></li>
+                    <li><a  href="./photos.html">
+                        <img alt="Bild Icon" class="navpic" src="./img/svg/image.svg" loading="lazy"
+                        >Fotogalerie
+                        </a>
+                        <ul>
+                            <li><a href="./photosAktive.html">Aktive</a></li>
+                            <li><a href="./photosJunior.html">Junioren</a></li>
+                            <li><a href="./photosRiege.html">Männerriege</a></li>
+                        </ul>
+                    </li>
+                    <li><a  href="./imprint.html">
+                        <img alt="Impressum" class="navpic" src="./img/svg/imprint.svg" loading="lazy"
+                        >Impressum
+                    </a></li>
+                </ul>
+            </div>
+        </nav>
         <main>
-            <section class="mainSection">
-                ######## HTML CODE ########
-            </section>
+            <div class="hero autoR5wftRD1tPJzkkWNe7YD riege">
+                <h1 class="hero_title auto1Np97rw4WQxwefqfgiiQ riege">Männerriege & Faustball</h1>
+            </div>
+            <h1 class="title">Unser Angebot</h1>
+            <div class="whyYou">
+                <p>Wir suchen laufend neue Mitglieder. Eine Schnupperteilnahme ist jederzeit möglich.</p>
+            </div>
+            <button type="button" class="join" id="download_beitrittsdokument">Du willst uns beitreten?</button>
+            <h1 class="title">Wo findet man uns?</h1>
+            <div class="we">
+                <div class="where">
+                    <img alt="Schulhaus Kappeli" src="./img/common/kappeli.jpg">
+                    <div>
+                        <h2>Turnhalle Kappeli</h2>
+                        <p>Badenerstrasse 618<br>8048 Zürich</p>
+                        <a href="https://maps.app.goo.gl/zFgq7zvYoAeazaWm7">Google Maps</a>
+                    </div>
+                </div>
+            </div>
+            <div class="googlemaps" id="googlemaps">
+                <div class="placeholder"><img alt="placeholder" src="./static/Pictures/Map/Maps.Map.png"></div>
+            </div>
+            <h1 class="title">Unsere Mannschaften</h1>
+            <div class="amigos">
+                <div>
+                    <img alt="Bilder Männerriege" src="./img/common/riege.jpg">
+                </div>
+                <div>
+                    <img alt="Bilder Männerriege" src="./img/common/riege.jpg">
+                </div>
+                <div>
+                    <p>
+                        <span class="tvtitle">Riege</span>
+                        <span class="vtitle">Trainingszeiten:</span>
+                        <span class="vpara">Mittwochs 18:00 - 19:00 Uhr</span>
+                        <span class="vpara">Anschliessend gemütliches Beisammensein im Restaurant Casino.</span>
+                        <span class="vpara">Kontakt: <a class="vlink" href="mailto:gerhard.flatt@bluewin.ch">Gery Flatt</a></span>
+                        <span class="vpara">Tel. 079 440 80 48</span>
+                    </p>
+                </div>
+                <div>
+                    <img alt="Bilder Männerriege" src="./img/common/riege.jpg">
+                </div>
+            </div>
+            <div class="junioren">
+                <div>
+                    <img alt="Bilder Faustball" src="./img/common/faustball (1).jpg" id="faustball1">
+                </div>
+                <div>
+                    <p>
+                        <span class="tvtitle">Faustball</span>
+                        <span class="vtitle">Trainingszeiten:</span>
+                        <span class="vpara">Mittwochs 19.00 - 20.00 Uhr</span>
+                        <span class="vpara">Kontakt: <a class="vlink" href="mailto:gerhard.flatt@bluewin.ch">Gery Flatt</a></span>
+                        <span class="vpara">Tel. 079 440 80 48</span>
+                    </p>
+                </div>
+                <div>
+                    <img alt="Bilder Faustball" src="./img/common/faustball (2).jpg" id="faustball2">
+                </div>
+                <div>
+                    <img alt="Bilder Faustball" src="./img/common/faustball (3).jpg">
+                </div>
+            </div>
         </main>
-
-        <footer id="footer">
-            <div class="footerDiv" id="footerDiv"></div>
-            <div class="scriptMeta">
-                <p id="currentSiteNameDE">###### Seitenname ######</p>
-                <p id="currentSiteNameEN"> ###### Seitenname Englisch ######</p>
-                <p id="currentSiteTitle"> ###### Seitentitel ######</p>
-                <p id="currentSiteType"> ###### Seitenart ######</p>
-                <p id="currentFilename"> ###### Dateiname ######</p>
+        <footer>
+            <div class="upper_footer">
+                <a href="./imprint.html">Impressum</a>
+                <p>|</p>
+                <a href="https://timondev.vip">Developper</a>
             </div>
-            <div class="scripts">
-                <script src="static/Javascript Files/baseBuilder.js"></script>
-                <script src="static/Javascript Files/navbarToggle.js"></script>
-                <script src="static/Javascript Files/topbarIconHover.js"></script>
-                <script src="static/Javascript Files/navbarDetailOpen.js"></script>
-                <script src="static/Javascript Files/footerSpacing.js"></script>
-                ######## Javascript Files ########
-            </div>
+            <p class="lower_footer">Copyright © 2024 Volleyball KTV Altstetten | Alle Rechte vorbehalten</p>
         </footer>
-
     </body>
 </html>

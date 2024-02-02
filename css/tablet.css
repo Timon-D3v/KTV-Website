@@ -378,6 +378,7 @@ main {
     background-repeat: no-repeat;
     background-size: 70vw 70vh;
     box-shadow: 0 8px 32px 0 var(--b4);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
 }
 
@@ -418,6 +419,7 @@ main {
     padding: 1.5vh;
     box-sizing: border-box;
     box-shadow: 0 8px 10px 0 var(--c1);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     text-decoration: none;
 

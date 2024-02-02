@@ -10,6 +10,7 @@ for (let i = 0; i < 9; i++) {
     img2[i].src = "./img/common/vollgas (" + (i + 1).toString() + ").jpg";
 };
 
+img[0].src = "./img/common/pcd (1).jpeg";
 img[1].src = "./img/common/pcd (3).jpg";
 img[2].src = "./img/common/pcd (2).jpg";
 

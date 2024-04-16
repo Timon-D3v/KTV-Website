@@ -159,8 +159,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 85vw;
-    height: 70vh;
+    width: 100%;
+    min-height: 70vh;
     border-radius: 2.5vh;
     background: linear-gradient(to right, var(--c7), var(--c2));
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -170,11 +170,16 @@ main {
 
 .eUFormDescription h1 {
     margin: 3vh 0;
+    padding: 0 5vw;
     color: var(--w1);
     font-size: 5vh;
     font-weight: bold;
     text-align: center;
     letter-spacing: 0.1em;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 
 .eUForm {
@@ -2463,7 +2468,6 @@ main {
     font-weight: bolder;
     font-size: 1.25em;
     text-align: center;
-    line-height: 2.5;
 }
 
 .notfat {
